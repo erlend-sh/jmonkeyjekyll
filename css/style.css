@@ -32,6 +32,10 @@ h1, h2, h3, h4, h5{
     display: inline;
 }
 
+#topmenu ul li a:hover {
+    text-decoration: none !important;
+}
+
 #header {
     padding: 1em 0;
     background: #6c971e url("../images/headerbg.png") no-repeat left center;
