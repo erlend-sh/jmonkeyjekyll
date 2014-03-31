@@ -71,10 +71,10 @@ h1, h2, h3, h4, h5{
     padding: 0px 4px;
 }
 
-a:link { color: #049DCE; }
+a:link { color: #049DCE; text-decoration: none; }
 a:visited { color: #049DCE; }
 a:hover { color: #049DCE; }
-a:active{ color: #049DCE; }
+a:active{ color: #049DCE; text-decoration: underline; }
 
 
 .page-container{
