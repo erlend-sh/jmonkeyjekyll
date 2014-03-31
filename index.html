@@ -25,7 +25,7 @@ This means that the example method <span class="snippet">rotateGeometry()</span>
 processed before continuing.<br/>
 <br/>
 If the processing thread needs to wait or needs the return value then <span class="snippet">get()</span> or the other methods in the returned Future
-object such as <span class="snippet">isDone()</span> can be used.
+object such as <span class="snippet">isDone()</span> can be used.<br/>
 
 <h2>Multithreading Optimization</h2>
 First, make sure you know what Application States and Custom Controls are.<br/><br/>
@@ -39,7 +39,7 @@ state. (For example, one thread for AI, one Sound, one Graphics). However we rec
 for game logic, and do multithreading within that loop when it is appropriate. This approach scales way better to
 multiple cores and does not break up your code logic.<br/><br/>
 
-Effectively, each for-loop in the main update loop might be a chance for multithreading, if you can break it up into self-contained tasks.
+Effectively, each for-loop in the main update loop might be a chance for multithreading, if you can break it up into self-contained tasks.<br/>
 
 <h2>Java Multithreading</h2>
 The java.util.concurrent package provides a good foundation for multithreading and dividing work into tasks that can be
