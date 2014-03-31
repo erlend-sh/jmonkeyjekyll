@@ -1,6 +1,7 @@
 body {
-    font-face: Helvetica, arial, freesans, clean, sans-serif;
+    font-family: Helvetica, arial, freesans, clean, sans-serif;
     font-size: 12px;
+    background-color: #ededed;
 }
 
 #topmenu {
@@ -9,7 +10,7 @@ body {
 }
 
 #header {
-    background-color: #00ff00;
+    background-color: darkgreen;
     margin: 10px 0px;
     padding: 5px;
 }
@@ -22,4 +23,15 @@ body {
 #container {
     width: 984px;
     margin: 0 auto;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 1px 6px 0 #c2c2c2;
+    border-radius: 4px;
+}
+
+.highlight {
+    background: #f9f9f9;
+    border: 1px solid silver;
+    margin: 10px 0;
+    padding: 0 10px;
 }
