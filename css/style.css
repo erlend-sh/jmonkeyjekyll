@@ -42,3 +42,8 @@ body {
     display: inline-block;
     white-space: pre;
 }
+
+a:link { color: #049DCE; }
+a:visited { color: #049DCE; }
+a:hover { color: #049DCE; }
+a:active{ color: #049DCE; }
