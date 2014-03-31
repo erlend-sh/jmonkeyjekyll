@@ -53,4 +53,25 @@ I will give just a short introduction.<br/><br/>
     <li>A Future is an object that you use to check the status of an individual Callable task. The Future also gives you the return value in case one is returned.</li>
 </ul>
 
+<h2>Multithreading in jME3</h2>
+So how do we implement multithreading in jME3?<br/><br/>
+Let's take the example of a Control that controls an NPC Spatial. The NPC Control has to compute a lengthy pathfinding operation for each NPC. If we would execute the operations directly in the simpleUpdate() loop, it would block the game each time a NPC wants to move from A to B. Even if we move this behaviour into the update() method of a dedicated NPC Control, we would still get annoying freeze frames, because it still runs on the same update loop thread.<br/><br/>
+To avoid slowdown, we decide to keep the pathfinding operations in the NPC Control, but execute it on another thread.
+
+<h2>Executor</h2>
+{% highlight java %}
+/* This constructor creates a new executor with a core pool size of 4. */
+ScheduledThreadPoolExecutor executor = new ScheduledThreadPoolExecutor(4);
+{% endhighlight %}
+
+Pool size means the executor will keep four threads alive at any time. Having more threads in the pool means that more tasks can run concurrently. But a bigger pool only results in a speed gain if the PC can handle it! Allocating a pool that is uselessly large just wastes memory, so you need to find a good compromise: About the same to double the size of the number of cores in the computer makes sense.<br/><br/>
+!!! Executor needs to be shut down when the application ends, in order to make the process die properly In your simple application you can override the destroy method and shutdown the executor:
+
+{% highlight java %}
+@Override
+public void destroy() {
+    super.destroy();
+    executor.shutdown();
+}
+{% endhighlight %}
 
