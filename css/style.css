@@ -60,10 +60,14 @@ h1, h2, h3, h4, h5{
 }
 
 .snippet {
-    color: #50B600;
+    color: #00bfff;
     font-family: Menlo, Consolas, "Courier New", Courier, "Liberation Mono", monospace;
     display: inline-block;
     white-space: pre;
+    font-size: 0.9em;
+    background: #efefef;
+    border-radius: 3px;
+    border: 1px dashed silver;
 }
 
 a:link { color: #049DCE; }
