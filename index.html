@@ -28,7 +28,7 @@ If the processing thread needs to wait or needs the return value then <span clas
 object such as <span class="snippet">isDone()</span> can be used.<br/>
 
 <h2>Multithreading Optimization</h2>
-First, make sure you know what Application States and Custom Controls are.<br/><br/>
+First, make sure you know what <a href="">Application States</a> and <a href="">Custom Controls</a> are.<br/><br/>
 More complex games may feature complex mathematical operations or artificial intelligence calculations (such as path
 finding for several NPCs). If you make many time-intensive calls on the same thread (in the update loop), they will
 block one another, and thus slow down the game to a degree that makes it unplayable. If your game requires long
@@ -44,7 +44,7 @@ Effectively, each for-loop in the main update loop might be a chance for multith
 <h2>Java Multithreading</h2>
 The java.util.concurrent package provides a good foundation for multithreading and dividing work into tasks that can be
 executed concurrently (hence the name). The three basic components are the Executor (supervises threads),
-Callable Objects (the tasks), and Future Objects (the result). You can read about the concurrent package more here,
+Callable Objects (the tasks), and Future Objects (the result). You can <a href="">read about the concurrent package more here</a>,
 I will give just a short introduction.<br/><br/>
 
 <ul>
