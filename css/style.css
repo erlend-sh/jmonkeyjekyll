@@ -26,6 +26,8 @@ h1, h2, h3, h4, h5{
 #header {
     background-color: #6c971e;
     padding: 1em 0;
+    background-image: url("./images/headerbg.png");
+    background-repeat: no-repeat;
 }
 
 #footer {
