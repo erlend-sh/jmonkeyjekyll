@@ -3,6 +3,17 @@ body {
     font-size: 12px;
 }
 
+#header {
+    background-color: #00ff00;
+    margin: 10px 0px;
+    padding: 5px;
+}
+
+#innerHeader {
+    width: 980px;
+    margin: 0 auto;
+}
+
 #container {
     width: 984px;
     margin: 0 auto;
