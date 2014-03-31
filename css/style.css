@@ -24,11 +24,8 @@ h1, h2, h3, h4, h5{
 }
 
 #header {
-    background-color: #6c971e;
     padding: 1em 0;
-    background-image: url("../images/headerbg.png");
-    background-repeat: no-repeat;
-    background-position-x: left center;
+    background: #6c971e url("../images/headerbg.png") no-repeat left center;
 }
 
 #footer {
