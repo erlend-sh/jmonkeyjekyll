@@ -59,8 +59,8 @@ h1, h2, h3, h4, h5{
 
 a:link { color: #049DCE; text-decoration: none; }
 a:visited { color: #049DCE; }
-a:hover { color: #049DCE; }
-a:active{ color: #049DCE; text-decoration: underline; }
+a:hover { color: #049DCE; text-decoration: underline; }
+a:active{ color: #049DCE; }
 
 
 .page-container{
