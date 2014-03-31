@@ -26,3 +26,17 @@ processed before continuing.<br/>
 <br/>
 If the processing thread needs to wait or needs the return value then <span class="snippet">get()</span> or the other methods in the returned Future
 object such as <span class="snippet">isDone()</span> can be used.
+
+<h2>Multithreading Optimization</h2>
+First, make sure you know what Application States and Custom Controls are.<br/><br/>
+More complex games may feature complex mathematical operations or artificial intelligence calculations (such as path
+finding for several NPCs). If you make many time-intensive calls on the same thread (in the update loop), they will
+block one another, and thus slow down the game to a degree that makes it unplayable. If your game requires long
+running tasks, you should run them concurrently on separate threads, which speeds up the application considerably.<br/><br/>
+
+Often multithreading means having separate detached logical loops going on in parallel, which communicate about their
+state. (For example, one thread for AI, one Sound, one Graphics). However we recommend to use a global update loop
+for game logic, and do multithreading within that loop when it is appropriate. This approach scales way better to
+multiple cores and does not break up your code logic.<br/><br/>
+
+Effectively, each for-loop in the main update loop might be a chance for multithreading, if you can break it up into self-contained tasks.
