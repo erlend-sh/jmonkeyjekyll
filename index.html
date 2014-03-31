@@ -22,7 +22,7 @@ public void rotateGeometry(final Geometry geo, final Quaternion rot) {
 
 Note that this example does not fetch the returned value by calling <span class="snippet">get()</span> on the Future object returned from <span class="snippet">enqueue()</span>.
 This means that the example method <span class="snippet">rotateGeometry()</span> will return immediately and will not wait for the rotation to be
-processed before continuing.
-
+processed before continuing.<br/>
+<br/>
 If the processing thread needs to wait or needs the return value then <span class="snippet">get()</span> or the other methods in the returned Future
 object such as <span class="snippet">isDone()</span> can be used.
