@@ -40,3 +40,17 @@ for game logic, and do multithreading within that loop when it is appropriate. T
 multiple cores and does not break up your code logic.<br/><br/>
 
 Effectively, each for-loop in the main update loop might be a chance for multithreading, if you can break it up into self-contained tasks.
+
+<h2>Java Multithreading</h2>
+The java.util.concurrent package provides a good foundation for multithreading and dividing work into tasks that can be
+executed concurrently (hence the name). The three basic components are the Executor (supervises threads),
+Callable Objects (the tasks), and Future Objects (the result). You can read about the concurrent package more here,
+I will give just a short introduction.<br/><br/>
+
+<ul>
+    <li>A Callable is one of the classes that gets executed on a thread in the Executor. The object represents one of several concurrent tasks (e.g, one NPC's path finding task). Each Callable is started from the updateloop by calling a method named call().</li>
+    <li>The Executor is one central object that manages all your Callables. Every time you schedule a Callable in the Executor, the Executor returns a Future object for it.</li>
+    <li>A Future is an object that you use to check the status of an individual Callable task. The Future also gives you the return value in case one is returned.</li>
+</ul>
+
+
