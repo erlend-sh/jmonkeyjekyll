@@ -1,7 +1,7 @@
 body {
     font-family: Helvetica, arial, freesans, clean, sans-serif;
-    font-size: 12px;
     background-color: #ededed;
+    line-height: 1.4;
 }
 
 #topmenu {
@@ -25,29 +25,17 @@ body {
     padding: 5px;
 }
 
-#innerHeader {
-    width: 980px;
-    margin: 0 auto;
-}
-
 #footer {
     background-color: darkgreen;
     margin: 20px 0px 0px 0px;
-    padding: 5px;
-}
-
-#innerFooter {
-    width: 980px;
-    margin: 0 auto;
-    padding: 10px;
+    padding: 1em;
     color: white;
 }
 
 #container {
-    width: 984px;
     margin: 0 auto;
     background-color: white;
-    padding: 10px;
+    padding: 1em;
     box-shadow: 0 1px 6px 0 #c2c2c2;
     border-radius: 4px;
 }
@@ -70,3 +58,9 @@ a:link { color: #049DCE; }
 a:visited { color: #049DCE; }
 a:hover { color: #049DCE; }
 a:active{ color: #049DCE; }
+
+
+.page-container{
+  max-width: 60em;
+  margin: 0 auto;
+}
